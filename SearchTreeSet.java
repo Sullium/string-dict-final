@@ -1,4 +1,4 @@
-public class CompactSearchTree implements Set{
+public class SearchTreeSet implements Set{
     private Node first;
     private int numElements;
     
