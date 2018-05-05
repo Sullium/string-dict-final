@@ -1,15 +1,17 @@
 public class Node{
     private Character ch;   //  Character stored by this Node
+    public  boolean containsElement;    //  Project description says Nodes can have this?
+                                        //  Likely means a function that returns boolean, but still idk 
     
-    public Node(char c){    //  Constructs a Node containing a character, w/o any subsequent nodes
+    public Node(Character c){    //  Constructs a Node containing a character
         this.ch = c;
     }
     
-    public char getCharValue(){     //  Returns this Node's character
+    public Character getCharValue(){     //  Returns this Node's character
         return ch;
     }
     
-    public char setCharValue(char desiredValue){    //  Unsure if needed?
+    public void setCharValue(char desiredValue){    //  Unsure if needed?
         ch = desiredValue;
     }
     
