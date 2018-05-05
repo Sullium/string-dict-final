@@ -7,11 +7,11 @@ public class Node{
         this.ch = c;
     }
     
-    public Character getCharValue(){     //  Returns this Node's character
+    public Character getCharacter(){     //  Returns this Node's character
         return ch;
     }
     
-    public void setCharValue(char desiredValue){    //  Unsure if needed?
+    public void setCharValue(Character desiredValue){    //  Unsure if needed?
         ch = desiredValue;
     }
     
