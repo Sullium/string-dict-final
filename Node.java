@@ -1,12 +1,8 @@
 public class Node{
-    private ArrayList<Node> allNext;    //  "Pointers" to all subsequent Nodes
-    private int numNext;                //  Number of Nodes branching off this one
-    private boolean isEndOfWord;        //  Internally tracks whether a word can end on this Node
-    private char ch;                    //  Character stored by this Node
+    private Character ch;   //  Character stored by this Node
     
     public Node(char c){    //  Constructs a Node containing a character, w/o any subsequent nodes
         this.ch = c;
-        numNext = 0;
     }
     
     public char getCharValue(){     //  Returns this Node's character
@@ -17,6 +13,8 @@ public class Node{
         ch = desiredValue;
     }
     
+    // TURNS OUT THE BELOW CONTRADICTS THE PROJECT INSTRUCTIONS. LOGIC MAY BE USEFUL IN SearchTreeSet
+/*    
     public Node getNextNodeAt(int index){
         if(i<numNext){
             Node toReturn = allNext[i];
@@ -59,5 +57,5 @@ public class Node{
         }
     }
     
-    
+    */
 }
