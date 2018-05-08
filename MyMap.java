@@ -24,7 +24,8 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public void clear() {
-
+	entries.clear();
+	size = 0;
     }
 
     public Collection<V> values() {
