@@ -8,11 +8,11 @@ public final class MyMap<K,V> implements Map<K,V> {
     int size;
     
     public int size() {
-	    return this.size;
+	return this.size;
     }
     
     public Set<Entry<K, V>> entrySet() {
-		return entries;
+	return entries;
     }
 
     public Set<K> keySet() {
