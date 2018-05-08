@@ -16,24 +16,24 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public Set<K> keySet() {
-		Set<K> keys = new LinkedHashSet<>();
-		for(Entry<K,V> entry: entries) {
-	    	keys.add(entry.getKey());
-		}
-		return keys;
+	Set<K> keys = new LinkedHashSet<>();
+	for(Entry<K,V> entry: entries) {
+	    keys.add(entry.getKey());
+	}
+	return keys;
     }
 
     public void clear() {
-		entries.clear();
-		size = 0;
+	entries.clear();
+	size = 0;
     }
 
     public Collection<V> values() {
-		Collection<V> vals = new ArrayList<V>();
-		for(Entry<K,V> entry : entries) {
-	    	vals.add(entry.getValue());
-		}
-		return vals;
+	Collection<V> vals = new ArrayList<V>();
+	for(Entry<K,V> entry : entries) {
+	    vals.add(entry.getValue());
+	}
+	return vals;
     }
 
     public void putAll(final Map<? extends K, ? extends V> map) {
@@ -41,28 +41,28 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V remove(final Object key) {
-		return null;
+	return null;
     }
 
     public V put(final K key, final V value) {
-		//returns old value after insertion
-		return null;
+	//returns old value after insertion
+	return null;
     }
 
     public V get(final Object key) {
-		return null;
+	return null;
     }
 
     public boolean containsValue(Object value) {
-		return false;
+	return false;
     }
 
     public boolean containsKey(Object key) {
-		return false;
+	return false;
     }
 
     public boolean isEmpty() {
-		return false;
+	return false;
     }
     
 	
