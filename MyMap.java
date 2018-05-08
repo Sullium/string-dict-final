@@ -8,62 +8,64 @@ public final class MyMap<K,V> implements Map<K,V> {
     int size;
     
     public int size() {
-	return this.size;
+        return this.size;
     }
     
     public Set<Entry<K, V>> entrySet() {
-	return entries;
+        return entries;
     }
 
     public Set<K> keySet() {
-	Set<K> keys = new LinkedHashSet<>();
-	for(Entry<K,V> entry: entries) {
-	    keys.add(entry.getKey());
-	}
-	return keys;
+        Set<K> keys = new LinkedHashSet<>();
+        for(Entry<K,V> entry: entries) {
+            keys.add(entry.getKey());
+        }
+        return keys;
     }
-
+    
     public void clear() {
-	entries.clear();
-	size = 0;
+        entries.clear();
+        size = 0;
     }
 
     public Collection<V> values() {
-	Collection<V> vals = new ArrayList<V>();
-	for(Entry<K,V> entry : entries) {
-	    vals.add(entry.getValue());
-	}
-	return vals;
+        Collection<V> vals = new ArrayList<V>();
+        for(Entry<K,V> entry : entries) {
+            vals.add(entry.getValue());
+        }
+        return vals;
     }
-
+    
     public void putAll(final Map<? extends K, ? extends V> map) {
-
+        Set<K> keys = map.keySet();
+        int mapSize = map.size();
+        for(for K key : keys){
+            entries.put(key, map.get(key));
+        }
     }
 
     public V remove(final Object key) {
-	return null;
+        return null;
     }
 
     public V put(final K key, final V value) {
-	//returns old value after insertion
-	return null;
+        //returns old value after insertion
+        return null;
     }
 
     public V get(final Object key) {
-	return null;
+        return null;
     }
-
+    
     public boolean containsValue(Object value) {
-	return false;
+        return false;
     }
 
     public boolean containsKey(Object key) {
-	return false;
-    }
-
-    public boolean isEmpty() {
-	return false;
+        return false;
     }
     
-	
+    public boolean isEmpty() {
+        return false;
+    }
 }
