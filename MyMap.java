@@ -91,7 +91,20 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public boolean containsKey(Object key) {
-        return false;
+        Iterator<Entry> it = entries.iterator();
+        int numEntries = entries.size();
+        Object toCheck;
+        boolean toReturn = false;
+        int i=0;
+        while(!(toReturn) && i<numEntries){
+            toCheck = it.next();
+            if(toCheck.getKey() == key){
+                toReturn = true;
+            }else{
+                i++;
+            }
+        }
+        return toReturn;
     }
     
     public boolean isEmpty() {
