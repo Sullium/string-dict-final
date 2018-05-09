@@ -1,12 +1,34 @@
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
 public class SearchTreeSet implements Set{
-    private Node first;
-    private int numElements;
-    
-    public boolean add(Node e){
-        return true;
+    private Node first;  //  We eventually figured out that Nodes would ideally be linked backwards
+    private int size;     // (ie. each node has a pointer to its parent). We had spent much time
+                          // trying to work with more strictly minimal Nodes.
+    public boolean add(Object e){
+	if(size==0){
+	first = new Node;
+	}else{
+	    
+	}
+	iterator<n> itr = n.iterator();
+	boolean tf=true;
+	while(it.hasNext) && (tf){  
+	    if(e==Node){
+		tf = false;
+	    } else{
+		tf =true;
+	    }
+	    
+	}
+	n=n.next();
+	n=e;
+	size++;
+	return tf;
     }
     
-    public boolean addAll(Collection<Node> c){
+    public boolean addAll(Collection c){
+	
         return true;
     }
     
@@ -15,10 +37,12 @@ public class SearchTreeSet implements Set{
     }
     
     public boolean contains(Object o){
-        return true;
+	iterator<n> itr = n.iterator();
+	
+	return true;
     }
     
-    public boolean containsAll(Collection<Node> c){
+    public boolean containsAll(Collection c){
         return true;
     }
     
@@ -32,34 +56,43 @@ public class SearchTreeSet implements Set{
     }
     
     public boolean isEmpty(){
-        return true;
+	if(size==0){
+	    return true;
+	}else {
+	    return false;
+	}
     }
     
-    public Iterator<Node> iterator(){
-        
+    public Iterator iterator(){  //  Our confusion on the structure of Nodes made this mostly
+        Iterator itr;            //  impossible to even start
     }
     
     public boolean remove(Object o){
         return true;
     }
     
-    public boolean removeAll(Collection<Node> c){
+    public boolean removeAll(Collection c){
         return true;
     }
     
-    public boolean retainAll(Collection<Node> c){
+    public boolean retainAll(Collection c){
         return true;
     }
     
     public int size(){
-    
+	return numElements;
     }
     
     public Object[] toArray(){
-        
+	Object[] o = new Object[];
+	return o;
+    }
+
+    public Object[] toArray(Object[] o){
+	return o;
     }
     
-    public <T> T[] toArray(T[] a){
+    //    public <T> T[] toArray(Object a){
     
-    }
+    //}
 }
