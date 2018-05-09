@@ -3,6 +3,7 @@ import java.util.Set;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
+import java.util.Iterator;
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     int size;
@@ -48,7 +49,7 @@ public final class MyMap<K,V> implements Map<K,V> {
         Iterator<Entry> it = entries.iterator();
         int numEntries = entries.size();
         int i = 0;
-        Object toCheck;
+        Entry toCheck;
         boolean reached = false;
         while((!reached) && (it.hasNext())){
             toReturn = it.next();
@@ -90,7 +91,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     public boolean containsValue(Object value) {
         Iterator<Entry> it = entries.iterator();
         int numEntries = entries.size();
-        Object toCheck;
+        Entry toCheck;
         boolean toReturn = false;
         int i=0;
         while(!(toReturn) && i<numEntries){
@@ -107,7 +108,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     public boolean containsKey(Object key) {
         Iterator<Entry> it = entries.iterator();
         int numEntries = entries.size();
-        Object toCheck;
+        Entry toCheck;
         boolean toReturn = false;
         int i=0;
         while(!(toReturn) && i<numEntries){
