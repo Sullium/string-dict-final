@@ -57,23 +57,18 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V get(final Object key) {
-        Set<Object> existingKeys = entries.keySet();
-        //int keySetSize = existingKeys.size();
-        boolean keyFound = false;
-        int i = 0;
-        int keyIndex;
-        for(Object k : existingKeys){
-            if(k.equals(key)){
-                keyFound = true;
-                keyIndex = i;
-            }else{
-                i++;   
-            }
-        }
+        int numEntries = entries.size();
         Iterator<Object> it = entries.iterator();
         V toReturn;
-        for(int j=0; j<keyIndex; j++){
-            toReturn = itr.next();
+        boolean found = false;
+        int i=0;
+        while((!found) && i<numEntries){
+            toReturn = it.next();
+            if(toReturn.getKey().equals(key)){
+                found = true;   
+            }else{
+                i++;
+            }
         }
         return toReturn;
     }
