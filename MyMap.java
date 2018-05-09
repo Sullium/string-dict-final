@@ -45,7 +45,21 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V remove(final Object key) {
-        return null;
+        Iterator<Entry> it = entries.iterator();
+        int numEntries = entries.size();
+        int i = 0;
+        Object toCheck;
+        boolean reached = false;
+        while((!reached) && (it.hasNext())){
+            toReturn = it.next();
+            if(toCheck.getKey().equals(key)){
+                entries.remove(key);
+            }else{
+                i++
+            }
+            
+        }
+        return toCheck;
     }
 
     public V put(final K key, final V value) {
