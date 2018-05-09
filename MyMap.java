@@ -58,7 +58,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     public V get(final Object key) {
         int numEntries = entries.size();
-        Iterator<Object> it = entries.iterator();
+        Iterator<Entry> it = entries.iterator();
         V toReturn;
         boolean found = false;
         int i=0;
@@ -74,6 +74,19 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
     
     public boolean containsValue(Object value) {
+        Iterator<Entry> it = entries.iterator();
+        int numEntries = entries.size();
+        Object toCheck;
+        boolean toReturn = false;
+        int i=0;
+        while(!(toReturn) && i<numEntries){
+            toCheck = it.next();
+            if(toCheck.getValue() == value){
+                toReturn = true;
+            }else{
+                i++;
+            }
+        }
         return false;
     }
 
