@@ -51,13 +51,14 @@ public final class MyMap<K,V> implements Map<K,V> {
     public V put(final K key, final V value) {
         //returns old value after insertion
         toReturn = get(key);
-        return null;
+        entries.add(key, value);
+        size++;
+        return toReturn;
     }
 
     public V get(final Object key) {
         Set<Object> existingKeys = entries.keySet();
-        int keySetSize = existingKeys.size();
-        boolean keyExists = false;
+        //int keySetSize = existingKeys.size();
         boolean keyFound = false;
         int i = 0;
         int keyIndex;
@@ -65,6 +66,8 @@ public final class MyMap<K,V> implements Map<K,V> {
             if(k.equals(key)){
                 keyFound = true;
                 keyIndex = i;
+            }else{
+                i++;   
             }
         }
         Iterator<Object> it = entries.iterator();
