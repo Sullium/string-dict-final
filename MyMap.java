@@ -68,12 +68,8 @@ public final class MyMap<K,V> implements Map<K,V> {
             }
         }
         
-        while((!elementReached) && it.hasNext()){
-            if(it.next().hashCode.equals(key.hashCode)){
-                elementReached = true;
-            }else{
-                it
-            }
+        for(int j=0; j<keyIndex; j++){
+            
         }
         return entries;
     }
