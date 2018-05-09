@@ -87,6 +87,10 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
     
     public boolean isEmpty() {
+        if (size>0){
         return false;
+        }else{
+        return true;
+        }
     }
 }
