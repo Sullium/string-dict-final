@@ -39,8 +39,8 @@ public final class MyMap<K,V> implements Map<K,V> {
     public void putAll(final Map<? extends K, ? extends V> map) {
         Set<K> keys = map.keySet();
         int mapSize = map.size();
-        for(for K key : keys){
-            entries.put(key, map.get(key));
+        for(K key : keys){
+            put(key, map.get(key));
         }
     }
 
@@ -54,7 +54,15 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V get(final Object key) {
-        return null;
+        Iterator<Object> it = entries.iterator();
+        Set<Object> keys = entries.keySet();
+        boolean elementReached = false;
+        while((!elementReached) && it.hasNext()){
+            if(it.next().equals()){
+                
+            }
+        }
+        return entries;
     }
     
     public boolean containsValue(Object value) {
