@@ -55,7 +55,7 @@ public final class MyMap<K,V> implements Map<K,V> {
             if(toCheck.getKey().equals(key)){
                 entries.remove(key);
             }else{
-                i++
+                i++;
             }
             
         }
