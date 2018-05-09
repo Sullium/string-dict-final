@@ -87,7 +87,7 @@ public final class MyMap<K,V> implements Map<K,V> {
                 i++;
             }
         }
-        return false;
+        return toReturn;
     }
 
     public boolean containsKey(Object key) {
