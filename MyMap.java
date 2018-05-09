@@ -50,6 +50,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     public V put(final K key, final V value) {
         //returns old value after insertion
+        toReturn = get(key);
         return null;
     }
 
