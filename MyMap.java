@@ -54,7 +54,6 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V get(final Object key) {
-        Iterator<Object> it = entries.iterator();
         Set<Object> existingKeys = entries.keySet();
         int keySetSize = existingKeys.size();
         boolean keyExists = false;
@@ -67,11 +66,12 @@ public final class MyMap<K,V> implements Map<K,V> {
                 keyIndex = i;
             }
         }
-        
+        Iterator<Object> it = entries.iterator();
+        V toReturn;
         for(int j=0; j<keyIndex; j++){
-            
+            toReturn = itr.next();
         }
-        return entries;
+        return toReturn;
     }
     
     public boolean containsValue(Object value) {
