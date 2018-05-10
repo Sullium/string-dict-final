@@ -62,7 +62,7 @@ public final class MyMap<K,V> implements Map<K,V> {
             
         }
 	
-        return toReturn;  //  Return removed value
+        return toReturn;  //  Return value that was removed
     }
 
     public V put(final K key, final V value) {
