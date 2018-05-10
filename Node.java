@@ -1,7 +1,6 @@
 public class Node{
     private Character ch;   //  Character stored by this Node
-    public  boolean containsElement;    //  Project description says Nodes can have this?
-                                        //  Likely means a function that returns boolean, but still idk 
+    public  boolean containsElement;    //  Unsure why this is necessary
     
     public Node(Character c){    //  Constructs a Node containing a character
         this.ch = c;
@@ -15,7 +14,7 @@ public class Node{
         ch = desiredValue;
     }
     
-    // TURNS OUT THE BELOW CONTRADICTS THE PROJECT INSTRUCTIONS. LOGIC MAY BE USEFUL IN SearchTreeSet
+    // The below was written before we realized that Nodes could/should be simpler
 /*    
     public Node getNextNodeAt(int index){
         if(i<numNext){
