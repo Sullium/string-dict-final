@@ -4,7 +4,7 @@ import java.util.Set;
 public class SearchTreeSet implements Set{
     private Node first;  //  We eventually figured out that Nodes would ideally be linked backwards
     private int size;     // (ie. each node has a pointer to its parent). We had spent much time
-                          // trying to work with more strictly minimal Nodes.
+                          // trying to work with more strictly minimal Nodes
     public boolean add(Object e){
 		if(size==0){
 			first = new Node;
