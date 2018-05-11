@@ -92,7 +92,7 @@ public class SearchTreeSet implements Set{
 	return o;
     }
     
-    //    public <T> T[] toArray(Object a){
+        public <T> T[] toArray(Object a){
     
-    //}
+    }
 }
