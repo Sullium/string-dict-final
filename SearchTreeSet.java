@@ -37,12 +37,30 @@ public class SearchTreeSet implements Set{
     }
     
     public boolean contains(Object o){
-        boolean toReturn = true;
-        Iterator itr = myNodes.iterator();
+        boolean toReturn = false;
+        int indexOfFirst = 0;
+        int max = myNodes.size();
 	    String toCheckFor = o.toString();
-	    while(toReturn && itr.hasNext()){
+	    for(indexOfFirst=0; i<max; i++){   //  Checks if first letter is in MyMap
+	        if(MyMap.getNode(indexOfFirst).getChar().equals(toCheckFor.charAt(0))){
+                toReturn = true;
+                break;
+            }
+        }
+        int a=1;
+        int stringSize = toCheckFor.size();
+        Node toStart = MyMap.getNode(indexofFirst);
+        Node toCompare;
+        while(toReturn && a<stringSize){    //  Check rest of characters branching off first
+            for(int i=0; i<a; i++){
+                toCompare = toStart.getNextNode();
+            }
+            if(!(toCompare.getCharacter().equals(toCheckfor.charAt(a))){
+                toReturn = false;   
+            }
+        }
 	
-        return true;
+        return toReturn;
     }
     
     public boolean containsAll(Collection c){
