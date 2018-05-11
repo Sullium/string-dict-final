@@ -27,7 +27,6 @@ public class SearchTreeSet implements Set{
     }
     
     public boolean addAll(Collection c){
-	
         return true;
     }
     
