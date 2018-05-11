@@ -6,8 +6,8 @@ public class SearchTreeSet implements Set{
     private int size;     // (ie. each node has a pointer to its parent). We had spent much time
                           // trying to work with more strictly minimal Nodes
     public boolean add(Object e){
-		if(size==0){
-			first = new Node;
+	    if(size==0){
+		    first = new Node;
 		}else{
 	    
 		}
