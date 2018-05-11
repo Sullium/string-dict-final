@@ -38,7 +38,9 @@ public class SearchTreeSet implements Set{
     
     public boolean contains(Object o){
         boolean toReturn = true;
-        Iterator itr = myNodes.iterator()
+        Iterator itr = myNodes.iterator();
+	    String toCheckFor = o.toString();
+	    while(toReturn && itr.hasNext()){
 	
         return true;
     }
