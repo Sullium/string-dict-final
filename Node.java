@@ -1,6 +1,7 @@
 public class Node{
     private Character ch;   //  Character stored by this Node
     public  boolean containsElement;    //  Unsure why this is necessary
+    private ArrayList<Character> allNext;
     
     public Node(Character c){    //  Constructs a Node containing a character
         this.ch = c;
@@ -15,7 +16,7 @@ public class Node{
     }
     
     // The below was written before we realized that Nodes could/should be simpler
-/*    
+    
     public Node getNextNodeAt(int index){
         if(i<numNext){
             Node toReturn = allNext[i];
@@ -58,5 +59,4 @@ public class Node{
         }
     }
     
-    */
 }
