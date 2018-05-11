@@ -18,8 +18,8 @@ public class Node{
     // The below was written before we realized that Nodes could/should be simpler
     
     public Node getNextNodeAt(int index){
-        if(i<numNext){
-            Node toReturn = allNext.get(i);
+        if(index<numNext){
+            Node toReturn = allNext.get(index);
             return toReturn;
         }else{
             return null;
