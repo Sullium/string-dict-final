@@ -1,7 +1,7 @@
 public class Node{
     private Character ch;   //  Character stored by this Node
     public  boolean containsElement;    //  Unsure why this is necessary
-    private ArrayList<Node> allNext;
+    private ArrayList<Node> allNext;    //  "Pointers" to all subsequent Nodes
     
     public Node(Character c){    //  Constructs a Node containing a character
         this.ch = c;
@@ -57,6 +57,10 @@ public class Node{
         }else{
             return null;    //  Return null if desired character does not follow this one
         }
+    }
+    
+    public void setNextChar(int index, char ch){
+        
     }
     
 }
